@@ -2,7 +2,6 @@
 
 // Wait for the page to load before running scripts
 document.addEventListener("DOMContentLoaded", function () {
-
   /**
    * Navbar Toggle Functionality
    */
@@ -14,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (overlay && navOpenBtn && navbar && navCloseBtn) {
     const navElems = [overlay, navOpenBtn, navCloseBtn];
 
-    navElems.forEach(elem => {
+    navElems.forEach((elem) => {
       elem.addEventListener("click", function () {
         navbar.classList.toggle("active");
         overlay.classList.toggle("active");
@@ -43,32 +42,43 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     console.error("Header or go-top button not found in the DOM.");
   }
-
 });
-
 
 //everething for shopping cart
 
 document.addEventListener("DOMContentLoaded", () => {
-    updateCartCount();
-    if (window.location.pathname.includes("cart.html")) {
-        loadCartItems();
-    }
+  updateCartCount();
+  if (window.location.pathname.includes("cart.html")) {
+    loadCartItems();
+  }
 });
 
 function addToCart(image, name, price) {
+  // Get existing cart items from localStorage
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  cart.push({ image, name, price }); // Now storing the image too
+
+  // Add new product to cart
+  cart.push({ image, name, price });
+
+  // Save updated cart back to localStorage
   localStorage.setItem("cart", JSON.stringify(cart));
+
+  // Update cart count in the UI
   updateCartCount();
+
+  // Redirect to load1.html (let load1 handle the timer)
+  window.location.href = "./load1/load1.html";
 }
 
-
+// Your original updateCartCount function
 function updateCartCount() {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    let cartCount = document.getElementById("cart-count");
-    if (cartCount) cartCount.textContent = cart.length;
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let cartCount = document.getElementById("cart-count");
+  if (cartCount) cartCount.textContent = cart.length;
 }
+
+// Ensure cart count is updated when the page loads
+document.addEventListener("DOMContentLoaded", updateCartCount);
 
 function loadCartItems() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -78,34 +88,32 @@ function loadCartItems() {
   cartItemsDiv.innerHTML = ""; // Clear previous cart display
 
   cart.forEach((item, index) => {
-      let div = document.createElement("div");
-      div.classList.add("cart-item");
+    let div = document.createElement("div");
+    div.classList.add("cart-item");
 
-      let img = document.createElement("img");
-      img.src = item.image;
-      img.alt = item.name;
-      img.classList.add("cart-item-image");
+    let img = document.createElement("img");
+    img.src = item.image;
+    img.alt = item.name;
+    img.classList.add("cart-item-image");
 
-      let span = document.createElement("span");
-      span.textContent = `${item.name} - $${item.price}`;
+    let span = document.createElement("span");
+    span.textContent = `${item.name} - $${item.price}`;
 
-      let button = document.createElement("button");
-      button.textContent = "Remove";
-      button.classList.add("remove-btn");
-      button.addEventListener("click", () => removeFromCart(index));
+    let button = document.createElement("button");
+    button.textContent = "Remove";
+    button.classList.add("remove-btn");
+    button.addEventListener("click", () => removeFromCart(index));
 
-      div.appendChild(img);
-      div.appendChild(span);
-      div.appendChild(button);
-      cartItemsDiv.appendChild(div);
+    div.appendChild(img);
+    div.appendChild(span);
+    div.appendChild(button);
+    cartItemsDiv.appendChild(div);
 
-      totalPrice += item.price;
+    totalPrice += item.price;
   });
 
   document.getElementById("total-price").textContent = "Total: $" + totalPrice;
 }
-
-
 
 function removeFromCart(index) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -115,17 +123,16 @@ function removeFromCart(index) {
   updateCartCount();
 }
 
-
 function checkout() {
-    if (JSON.parse(localStorage.getItem("cart"))?.length > 0) {
-        window.location.href = "checkout.html";
-    } else {
-        alert("Your cart is empty!");
-    }
+  if (JSON.parse(localStorage.getItem("cart"))?.length > 0) {
+    window.location.href = "checkout.html";
+  } else {
+    alert("Your cart is empty!");
+  }
 }
 
 function clearCart() {
-    localStorage.removeItem("cart");
-    loadCartItems();
-    updateCartCount();
+  localStorage.removeItem("cart");
+  loadCartItems();
+  updateCartCount();
 }
