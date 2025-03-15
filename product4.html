@@ -158,7 +158,7 @@
             </div> -->
 
             
-            <button class="btn btn-primary" onclick="addToCart('images/product-4.jpg', 'Air Jordan 7 Retro', 170.85)">Add to Cart</button>
+            <button class="btn btn-primary" onclick="redirectToLoader()">Add to Cart</button>
 
         </div>
     </div>
@@ -372,6 +372,44 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
 
+    <script>
+      // Your product-specific addToCart function
+      function addToCart() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({
+          image: "images/product-4.jpg",
+          name: "Air Jordan 7 Retro",
+          price: 170.85,
+        });
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartCount();
+      }
+
+      // Function to update cart counter
+      function updateCartCount() {
+        const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+        const cartCountElem = document.getElementById("cart-count");
+        if (cartCountElem) cartCountElem.innerText = cartItems.length;
+      }
+
+      // Button click handler clearly
+      function redirectToLoader() {
+        sessionStorage.setItem("actionAfterLoading", "addToCart"); // set action clearly
+        sessionStorage.setItem("returnPage", window.location.pathname); // store current page
+        window.location.href = "./load1/load1.html"; // redirect clearly to loading screen
+      }
+
+      // Check after returning from loader and perform action
+      document.addEventListener("DOMContentLoaded", () => {
+        updateCartCount();
+
+        const action = sessionStorage.getItem("actionAfterLoading");
+        if (action === "addToCart") {
+          sessionStorage.removeItem("actionAfterLoading"); // clear action flag clearly
+          addToCart(); // execute clearly your action here
+        }
+      });
+    </script>
 
 </body>
 </html>

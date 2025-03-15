@@ -126,13 +126,26 @@
         <div class="cart-container">
             <!-- Cart Items Section -->
             <div class="cart-items-section">
-                <div id="cart-items"></div>
+              <div id="cart-items">
+                <!-- Each cart item will dynamically appear here -->
+                <div class="cart-item">
+                    <img class="item-image" src="image-path.jpg" alt="Product Image">
+                    <span class="item-name">Product Name</span>
+                    <button class="delete-btn">
+                        <ion-icon name="trash-outline"></ion-icon>
+                    </button>
+                    <span class="item-price">$99</span>
+                </div>
+            </div>
+            
             </div>
     
             <!-- Cart Summary Section -->
             <div class="cart-summary">
                 <h3 id="total-price">Total: $0</h3>
-                <button class="btn btn-primary" onclick="checkout()">Proceed to Checkout</button>
+                <a href="create-account.html">
+                  <button class="btn btn-primary" >Proceed to Checkout</button>
+                </a>
                 <button class="btn btn-secondary" onclick="clearCart()">Clear Cart</button>
             </div>
         </div>

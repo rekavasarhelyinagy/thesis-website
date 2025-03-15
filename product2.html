@@ -10,11 +10,12 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
-    rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header" data-header>
@@ -113,12 +114,12 @@
           </li> -->
 
             <div class="cart-icon">
-                <a href="cart.html">
+              <a href="cart.html">
                 <button class="nav-action-btn">
-                <ion-icon name="bag-outline" ></ion-icon>
+                  <ion-icon name="bag-outline"></ion-icon>
                 </button>
-                </a>
-                <span class="cart-number-style" id="cart-count">0</span>
+              </a>
+              <span class="cart-number-style" id="cart-count">0</span>
             </div>
           </ul>
         </nav>
@@ -173,12 +174,8 @@
                 <button class="qty-btn">+</button>
             </div> -->
 
-        <button
-          class="btn btn-primary"
-          onclick="addToCart('images/product-2.jpg','Leather Mens Slipper', 190.85)"
-        >
-          Add to Cart
-        </button>
+            <button class="btn btn-primary" onclick="redirectToLoader()">Add to Cart</button>
+
       </div>
     </div>
 
@@ -385,5 +382,44 @@
       nomodule
       src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
     ></script>
+
+    <script>
+      // Your product-specific addToCart function
+      function addToCart() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({
+          image: "images/product-2.jpg",
+          name: "Leather Mens Slipper",
+          price: 190.85,
+        });
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartCount();
+      }
+
+      // Function to update cart counter
+      function updateCartCount() {
+        const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+        const cartCountElem = document.getElementById("cart-count");
+        if (cartCountElem) cartCountElem.innerText = cartItems.length;
+      }
+
+      // Button click handler clearly
+      function redirectToLoader() {
+        sessionStorage.setItem("actionAfterLoading", "addToCart"); // set action clearly
+        sessionStorage.setItem("returnPage", window.location.pathname); // store current page
+        window.location.href = "./load1/load1.html"; // redirect clearly to loading screen
+      }
+
+      // Check after returning from loader and perform action
+      document.addEventListener("DOMContentLoaded", () => {
+        updateCartCount();
+
+        const action = sessionStorage.getItem("actionAfterLoading");
+        if (action === "addToCart") {
+          sessionStorage.removeItem("actionAfterLoading"); // clear action flag clearly
+          addToCart(); // execute clearly your action here
+        }
+      });
+    </script>
   </body>
 </html>

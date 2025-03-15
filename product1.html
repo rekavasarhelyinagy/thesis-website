@@ -17,6 +17,9 @@
 </head>
 <body>
 
+  
+
+
   <header class="header" data-header>
     <div class="container">
 
@@ -121,6 +124,7 @@
     </div>
   </header>
   
+  <main>
     <div class="product-container">
         <div class="product-image">
             <span class="product-tag">New</span>
@@ -162,16 +166,14 @@
             </div> -->
 
             
-            <button class="btn btn-primary" onclick="addToCart('images/product-1.jpg', 'Running Sneaker Shoes', 180.85)">Add to Cart</button>
+            <button class="btn btn-primary" onclick="redirectToLoader()">Add to Cart</button>
 
         </div>
     </div>
 
+  </main>
 
-
-    
-
-    <footer class="footer">
+  <footer class="footer">
 
       <div class="footer-top section">
         <div class="container">
@@ -369,13 +371,59 @@
         </div>
       </div>
   
-    </footer>
+  </footer>
   
     <script src="script.js"></script>
 
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
 
+    <script>
+      
+    </script>
+
+</div>
+
+<script>
+  // Your product-specific addToCart function
+  function addToCart(){
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push({ image: 'images/product-1.jpg', name: 'Running Sneaker Shoes', price: 180.85 });
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartCount();
+  }
+  
+  // Function to update cart counter
+  function updateCartCount(){
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartCountElem = document.getElementById('cart-count');
+    if(cartCountElem) cartCountElem.innerText = cartItems.length;
+  }
+  
+  // Button click handler clearly
+  
+  function redirectToLoader(){
+    sessionStorage.setItem("actionAfterLoading", "addToCart");
+    sessionStorage.setItem("returnPage", window.location.pathname);
+    window.location.href = "./load1/load1.html";
+  }
+
+
+  
+  // Check after returning from loader and perform action
+  document.addEventListener("DOMContentLoaded", () => {
+    updateCartCount();
+  
+    const action = sessionStorage.getItem("actionAfterLoading");
+    if (action === "addToCart") {
+      sessionStorage.removeItem("actionAfterLoading"); // clear action flag clearly
+      addToCart(); // execute clearly your action here
+    }
+  });
+  </script>
+  
+
+  
 
 </body>
 </html>

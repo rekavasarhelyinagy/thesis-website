@@ -53,22 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-function addToCart(image, name, price) {
-  // Get existing cart items from localStorage
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  // Add new product to cart
-  cart.push({ image, name, price });
-
-  // Save updated cart back to localStorage
-  localStorage.setItem("cart", JSON.stringify(cart));
-
-  // Update cart count in the UI
-  updateCartCount();
-
-  // Redirect to load1.html (let load1 handle the timer)
-  window.location.href = "./load1/load1.html";
-}
 
 // Your original updateCartCount function
 function updateCartCount() {
@@ -81,46 +66,44 @@ function updateCartCount() {
 document.addEventListener("DOMContentLoaded", updateCartCount);
 
 function loadCartItems() {
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  let cartItemsDiv = document.getElementById("cart-items");
-  let totalPrice = 0;
+  let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+  const cartItemsContainer = document.getElementById('cart-items');
 
-  cartItemsDiv.innerHTML = ""; // Clear previous cart display
+  cartItemsContainer.innerHTML = '';
 
-  cart.forEach((item, index) => {
-    let div = document.createElement("div");
-    div.classList.add("cart-item");
+  cartItems.forEach((item, index) => {
+      let cartItem = document.createElement('div');
+      cartItem.className = 'cart-item';
 
-    let img = document.createElement("img");
-    img.src = item.image;
-    img.alt = item.name;
-    img.classList.add("cart-item-image");
+      cartItem.innerHTML = `
+          <img class="item-image" src="${item.image}" alt="${item.name}">
+          <span class="item-name">${item.name}</span>
+          <button class="delete-btn" onclick="removeItem(${index})">
+              <ion-icon name="trash-outline"></ion-icon>
+          </button>
+          <span class="item-price">$${item.price}</span>
+      `;
 
-    let span = document.createElement("span");
-    span.textContent = `${item.name} - $${item.price}`;
-
-    let button = document.createElement("button");
-    button.textContent = "Remove";
-    button.classList.add("remove-btn");
-    button.addEventListener("click", () => removeFromCart(index));
-
-    div.appendChild(img);
-    div.appendChild(span);
-    div.appendChild(button);
-    cartItemsDiv.appendChild(div);
-
-    totalPrice += item.price;
+      cartItemsContainer.appendChild(cartItem);
   });
 
-  document.getElementById("total-price").textContent = "Total: $" + totalPrice;
+  updateTotalPrice();
+  updateCartCount();
 }
 
-function removeFromCart(index) {
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  cart.splice(index, 1);
-  localStorage.setItem("cart", JSON.stringify(cart));
-  loadCartItems(); // Refresh cart display
-  updateCartCount();
+
+function updateTotalPrice() {
+  let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+  let total = cartItems.reduce((sum, item) => sum + item.price, 0);
+  document.getElementById('total-price').innerHTML = `Total: $${total.toFixed(2)}`;
+}
+
+
+function removeItem(index) {
+    let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    cartItems.splice(index, 1); // remove the item
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+    loadCartItems(); // reload cart
 }
 
 function checkout() {
@@ -131,8 +114,45 @@ function checkout() {
   }
 }
 
+function updateCartCount(){
+  let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+  document.getElementById('cart-count').innerText = cartItems.length;
+}
+
 function clearCart() {
   localStorage.removeItem("cart");
   loadCartItems();
   updateCartCount();
 }
+
+/* create-account page */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("createAccountForm");
+  const submitBtn = document.getElementById("submitBtn");
+  const checkoutBtn = document.getElementById("checkoutBtn");
+  const inputs = form.querySelectorAll("input[required]"); // Only required inputs
+
+  // Function to check form validity
+  function checkFormValidity() {
+      const allFilled = [...inputs].every(input => input.value.trim() !== "");
+      const passwordsMatch = document.getElementById("password").value === document.getElementById("confirmPassword").value;
+      submitBtn.disabled = !(allFilled && passwordsMatch);
+  }
+
+  // Enable "Create Account" button when form is valid
+  inputs.forEach(input => {
+      input.addEventListener("input", checkFormValidity);
+  });
+
+  // Activate "Proceed to Checkout" after account creation
+  submitBtn.addEventListener("click", function () {
+      alert("Account Created Successfully!");
+      checkoutBtn.disabled = false;
+  });
+
+  // Proceed to Checkout action
+  checkoutBtn.addEventListener("click", function () {
+      window.location.href = "checkout.html";  // Change URL if necessary
+  });
+});
