@@ -150,7 +150,7 @@
                 r="18"
                 stroke="black"
                 stroke-width="2"
-                fill="blue"
+                fill="red"
               />
             </svg>
           </div>
@@ -159,13 +159,17 @@
         <div class="product-size">
           <!-- <label>Size:</label> <a href="#" class="size-guide">Size Guide</a> -->
           <div class="size-options">
-            <button>EUR30</button> <button>EUR31</button>
-            <button>EUR32</button> <button>EUR33</button>
-            <button>EUR34</button> <button>EUR35</button>
-            <button>EUR36</button> <button>EUR37</button> <button>EUR38</button>
-            <button>EUR39</button>
+              <button>EUR35</button>
+              <button>EUR36</button> <button>EUR37</button> <button>EUR38</button>
+              <button>EUR39</button> <button>EUR40</button> <button>EUR41</button>
+              <button>EUR42</button> <button>EUR43</button> <button>EUR44</button>
+              <button>EUR45</button> <button>EUR46</button> <button>EUR47</button>
+              <button>EUR48</button> <button>EUR49</button> 
+
+
           </div>
         </div>
+
 
         <!-- <div class="product-quantity">
                 <label>Qty:</label>
@@ -384,42 +388,90 @@
     ></script>
 
     <script>
-      // Your product-specific addToCart function
-      function addToCart() {
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        cart.push({
-          image: "images/product-3.jpg",
-          name: "Simple Fabric Shoe",
-          price: 160.85,
+
+      document.querySelectorAll('.size-options button').forEach(button => {
+        button.addEventListener('click', () => {
+          document.querySelectorAll('.size-options button').forEach(btn => {
+            btn.classList.remove('selected');
+          });
+          button.classList.add('selected');
         });
+      });
+    
+    
+    
+      // Your product-specific addToCart function
+      function addToCart(){
+        const selectedSize = sessionStorage.getItem("selectedSize") || "N/A";
+    
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    
+        cart.push({
+          image: 'images/product-3.jpg',
+          name: 'Running Sneaker Shoes',
+          price: 180.85,
+          size: selectedSize // size retrieved from sessionStorage
+        });
+    
         localStorage.setItem("cart", JSON.stringify(cart));
         updateCartCount();
+    
+        sessionStorage.removeItem("selectedSize"); // clear after use
       }
-
+    
+    
+      
       // Function to update cart counter
-      function updateCartCount() {
-        const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-        const cartCountElem = document.getElementById("cart-count");
-        if (cartCountElem) cartCountElem.innerText = cartItems.length;
+      function updateCartCount(){
+        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartCountElem = document.getElementById('cart-count');
+        if(cartCountElem) cartCountElem.innerText = cartItems.length;
       }
-
+      
       // Button click handler clearly
-      function redirectToLoader() {
-        sessionStorage.setItem("actionAfterLoading", "addToCart"); // set action clearly
-        sessionStorage.setItem("returnPage", window.location.pathname); // store current page
-        window.location.href = "./load1/load1.html"; // redirect clearly to loading screen
+      
+      function redirectToLoader(){
+        const selectedSizeButton = document.querySelector('.size-options button.selected');
+        const selectedSize = selectedSizeButton ? selectedSizeButton.textContent.trim() : null;
+    
+        if(selectedSize){
+          sessionStorage.setItem("selectedSize", selectedSize);
+        } else {
+          sessionStorage.setItem("selectedSize", "N/A");
+        }
+    
+        sessionStorage.setItem("actionAfterLoading", "addToCart");
+        sessionStorage.setItem("returnPage", window.location.pathname);
+        window.location.href = "./load1/load1.html";
       }
-
+    
+    
+    
+      
       // Check after returning from loader and perform action
       document.addEventListener("DOMContentLoaded", () => {
-        updateCartCount();
-
-        const action = sessionStorage.getItem("actionAfterLoading");
-        if (action === "addToCart") {
-          sessionStorage.removeItem("actionAfterLoading"); // clear action flag clearly
-          addToCart(); // execute clearly your action here
-        }
-      });
+      updateCartCount();
+    
+      // Restore selected size visually
+      const selectedSize = sessionStorage.getItem("selectedSize");
+      if(selectedSize){
+        const sizeOptionsButtons = document.querySelectorAll('.size-options button');
+        sizeOptionsButtons.forEach(button => {
+          if(button.textContent.trim() === selectedSize){
+            button.classList.add('selected');
+          } else {
+            button.classList.remove('selected');
+          }
+        });
+      }
+    
+      const action = sessionStorage.getItem("actionAfterLoading");
+      if (action === "addToCart") {
+        sessionStorage.removeItem("actionAfterLoading"); 
+        addToCart(); 
+      }
+    });
+    
     </script>
 
   </body>

@@ -72,24 +72,29 @@ function loadCartItems() {
   cartItemsContainer.innerHTML = '';
 
   cartItems.forEach((item, index) => {
-      let cartItem = document.createElement('div');
-      cartItem.className = 'cart-item';
+    let cartItem = document.createElement('div');
+    cartItem.className = 'cart-item';
 
-      cartItem.innerHTML = `
-          <img class="item-image" src="${item.image}" alt="${item.name}">
-          <span class="item-name">${item.name}</span>
-          <button class="delete-btn" onclick="removeItem(${index})">
-              <ion-icon name="trash-outline"></ion-icon>
-          </button>
-          <span class="item-price">$${item.price}</span>
-      `;
+    cartItem.innerHTML = `
+      <img class="item-image" src="${item.image}" alt="${item.name}">
+      <div class="item-info">
+        <span class="item-name">${item.name}</span>
+        <span class="item-size">Size: ${item.size}</span> <!-- clearly added size -->
+      </div>
+      <button class="delete-btn" onclick="removeItem(${index})">
+        <ion-icon name="trash-outline"></ion-icon>
+      </button>
+      <span class="item-price">$${item.price}</span>
+    `;
 
-      cartItemsContainer.appendChild(cartItem);
+    cartItemsContainer.appendChild(cartItem);
   });
 
   updateTotalPrice();
   updateCartCount();
 }
+
+
 
 
 function updateTotalPrice() {
