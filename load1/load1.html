@@ -8,7 +8,7 @@
     document.addEventListener("DOMContentLoaded", function(){
       setTimeout(function(){
         const returnPage = sessionStorage.getItem("returnPage");
-        window.location.href = returnPage ? ".." + returnPage : "../product1.html";
+        window.location.href = returnPage ? ".." + returnPage : "./product1.html";
       }, 2000); // exactly 2 seconds before redirecting back
     });
   </script>

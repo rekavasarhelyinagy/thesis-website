@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men collection</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+      <div class="container">
+        <div class="overlay" data-overlay></div>
+
+        <a href="index.html" class="logo">
+          <img
+            src="../images/logo.svg"
+            width="160"
+            height="50"
+            alt="Footcap logo"
+          />
+        </a>
+
+        <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+
+        <nav class="navbar" data-navbar>
+          <button
+            class="nav-close-btn"
+            data-nav-close-btn
+            aria-label="Close Menu"
+          >
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <a href="#" class="logo">
+            <img
+              src="../images/logo.svg"
+              width="190"
+              height="50"
+              alt="Footcap logo"
+            />
+          </a>
+
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a href="#" class="navbar-link">Home</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#" class="navbar-link">About</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#" class="navbar-link">Products</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#" class="navbar-link">Shop</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#" class="navbar-link">Blog</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#" class="navbar-link">Contact</a>
+            </li>
+          </ul>
+
+          <ul class="nav-action-list">
+            <!-- <li>
+            <button class="nav-action-btn">
+              <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+
+              <span class="nav-action-text">Search</span>
+            </button>
+          </li>
+
+          <li>
+            <a href="#" class="nav-action-btn">
+              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+              <span class="nav-action-text">Login / Register</span>
+            </a>
+          </li> -->
+
+            <!-- <li>
+            <button class="nav-action-btn">
+              <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+
+              <span class="nav-action-text">Wishlist</span>
+
+              <data class="nav-action-badge" value="5" aria-hidden="true">5</data>
+            </button>
+          </li> -->
+
+            <!-- <li class="cart-container">
+            <button class="nav-action-btn">
+              <ion-icon name="bag-outline"></ion-icon>
+              <data id="cart-badge" value="0">0</data>  Cart badge value
+            </button>
+          </li> -->
+
+            <div class="cart-icon">
+              <a href="cart.html">
+                <button class="nav-action-btn">
+                  <ion-icon name="bag-outline"></ion-icon>
+                </button>
+              </a>
+              <span class="cart-number-style" id="cart-count">0</span>
+            </div>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+        <section class="section product">
+            <div class="container">
+    
+              <h2 class="h2 section-title">Women Collection</h2>
+    
+              
+    
+              <ul class="product-list">
+    
+                <li class="product-item">
+                  <div class="product-card" tabindex="0">
+    
+                    <figure class="card-banner">
+                      <a href="product3.html">
+                        <img src="./images/product-3.jpg" width="312" height="350" loading="lazy"
+                          alt="Running Sneaker Shoes" class="image-contain">
+                      </a>
+    
+                      <div class="card-badge">New</div>
+    
+                      
+                    </figure>
+    
+                    
+                    <div class="card-content">
+    
+                      <div class="card-cat">
+                        <p href="#" class="card-cat-link">Men</p> /
+                        <p href="#" class="card-cat-link">Women</p>
+                      </div>
+    
+                      <h3 class="h3 card-title">
+                        <a href="./products/product3.html">Running Sneaker Shoes</a>
+                      </h3>
+    
+                      <data class="card-price" value="180.85">$180.85</data>
+    
+                    </div>
+    
+                  </div>
+                </li>
+    
+                <li class="product-item">
+                  <div class="product-card" tabindex="0">
+    
+                    <figure class="card-banner">
+                      <a href="product24.html">
+                        <img src="./images/product-24.jpg" width="312" height="350" loading="lazy"
+                          alt="Leather Mens Slipper" class="image-contain">
+                      </a>
+    
+                      <!-- <ul class="card-action-list">
+    
+                        <li class="card-action-item">
+                          <button class="card-action-btn" aria-labelledby="card-label-1">
+                            <ion-icon name="cart-outline"></ion-icon>
+                          </button>
+    
+                          <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                        </li>
+    
+                        <li class="card-action-item">
+                          <button class="card-action-btn" aria-labelledby="card-label-2">
+                            <ion-icon name="heart-outline"></ion-icon>
+                          </button>
+    
+                          <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                        </li>
+    
+                        <li class="card-action-item">
+                          <button class="card-action-btn" aria-labelledby="card-label-3">
+                            <ion-icon name="eye-outline"></ion-icon>
+                          </button>
+    
+                          <div class="card-action-tooltip" id="card-label-3">Quick View</div>
+                        </li>
+    
+                        <li class="card-action-item">
+                          <button class="card-action-btn" aria-labelledby="card-label-4">
+                            <ion-icon name="repeat-outline"></ion-icon>
+                          </button>
+    
+                          <div class="card-action-tooltip" id="card-label-4">Compare</div>
+                        </li>
+    
+                      </ul> -->
+                    </figure>
+    
+                    <div class="card-content">
+    
+                      <div class="card-cat">
+                        <p href="#" class="card-cat-link">Men</p> /
+                        <p href="#" class="card-cat-link">Sports</p>
+                      </div>
+    
+                      <h3 class="h3 card-title">
+                        <a href="#">Leather Mens Slipper</a>
+                      </h3>
+    
+                      <data class="card-price" value="190.85">$190.85</data>
+    
+                    </div>
+    
+                  </div>
+                </li>
+    
+                <li class="product-item">
+                  <div class="product-card" tabindex="0">
+    
+                    <figure class="card-banner">
+                      <a href="product7.html">
+                        <img src="./images/product-7.jpg" width="312" height="350" loading="lazy"
+                          alt="Simple Fabric Shoe" class="image-contain">
+                      </a>
+    
+                      <!-- <div class="card-badge">New</div> -->
+    
+                      <!-- <ul class="card-action-list">
+    
+                        <li class="card-action-item">
+                          <button class="card-action-btn" aria-labelledby="card-label-1">
+                            <ion-icon name="cart-outline"></ion-icon>
+                          </button>
+    
+                          <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                        </li>
+    
+                        <li class="card-action-item">
+                          <button class="card-action-btn" aria-labelledby="card-label-2">
+                            <ion-icon name="heart-outline"></ion-icon>
+                          </button>
+    
+                          <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                        </li>
+    
+                        <li class="card-action-item">
+                          <button class="card-action-btn" aria-labelledby="card-label-3">
+                            <ion-icon name="eye-outline"></ion-icon>
+                          </button>
+    
+                          <div class="card-action-tooltip" id="card-label-3">Quick View</div>
+                        </li>
+    
+                        <li class="card-action-item">
+                          <button class="card-action-btn" aria-labelledby="card-label-4">
+                            <ion-icon name="repeat-outline"></ion-icon>
+                          </button>
+    
+                          <div class="card-action-tooltip" id="card-label-4">Compare</div>
+                        </li>
+    
+                      </ul> -->
+                    </figure>
+    
+                    <div class="card-content">
+    
+                      <div class="card-cat">
+                        <p href="#" class="card-cat-link">Men</p> /
+                        <p href="#" class="card-cat-link">Women</p>
+                      </div>
+    
+                      <h3 class="h3 card-title">
+                        <a href="product7.html">Simple Fabric Shoe</a>
+                      </h3>
+    
+                      <data class="card-price" value="160.85">$160.85</data>
+    
+                    </div>
+    
+                  </div>
+                </li>
+    
+                <li class="product-item">
+                  <div class="product-card" tabindex="0">
+    
+                    <figure class="card-banner">
+                      <a href="product25.html">
+                        <img src="./images/product-25.jpg" width="312" height="350" loading="lazy"
+                          alt="Air Jordan 7 Retro" class="image-contain">
+                      </a>
+    
+                      <div class="card-badge"> -25%</div>
+    
+                      <!-- <ul class="card-action-list">
+    
+                        <li class="card-action-item">
+                          <button class="card-action-btn" aria-labelledby="card-label-1">
+                            <ion-icon name="cart-outline"></ion-icon>
+                          </button>
+    
+                          <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                        </li>
+    
+                        <li class="card-action-item">
+                          <button class="card-action-btn" aria-labelledby="card-label-2">
+                            <ion-icon name="heart-outline"></ion-icon>
+                          </button>
+    
+                          <div class="card-action-tooltip" id="card-label-2">Add to Whishlist</div>
+                        </li>
+    
+                        <li class="card-action-item">
+                          <button class="card-action-btn" aria-labelledby="card-label-3">
+                            <ion-icon name="eye-outline"></ion-icon>
+                          </button>
+    
+                          <div class="card-action-tooltip" id="card-label-3">Quick View</div>
+                        </li>
+    
+                        <li class="card-action-item">
+                          <button class="card-action-btn" aria-labelledby="card-label-4">
+                            <ion-icon name="repeat-outline"></ion-icon>
+                          </button>
+    
+                          <div class="card-action-tooltip" id="card-label-4">Compare</div>
+                        </li>
+    
+                      </ul> -->
+                    </figure>
+    
+                    <div class="card-content">
+    
+                      <div class="card-cat">
+                        <p href="#" class="card-cat-link">Men</p> /
+                        <p href="#" class="card-cat-link">Sports</p>
+                      </div>
+    
+                      <h3 class="h3 card-title">
+                        <a href="#">Air Jordan 7 Retro </a>
+                      </h3>
+    
+                      <data class="card-price" value="170.85">$170.85 <del>$200.21</del></data>
+    
+                    </div>
+    
+                  </div>
+                </li>
+    
+                <li class="product-item">
+                  <div class="product-card" tabindex="0">
+    
+                    <figure class="card-banner">
+                      <a href="product18.html">
+                        <img src="./images/product-26.jpg" width="312" height="350" loading="lazy"
+                          alt="Running Sneaker Shoes" class="image-contain">
+                      </a>
+    
+                      <div class="card-badge">Limited</div> 
+    
+                      
+                    </figure>
+    
+                    
+                    <div class="card-content">
+    
+                      <div class="card-cat">
+                        <p href="#" class="card-cat-link">Men</p> /
+                        <p href="#" class="card-cat-link">Sport</p>
+                      </div>
+    
+                      <h3 class="h3 card-title">
+                        <a href="product10.html">Running Sneaker Shoes</a>
+                      </h3>
+    
+                      <data class="card-price" value="180.85">$180.85</data>
+    
+                    </div>
+    
+                  </div>
+                </li>
+
+                <li class="product-item">
+                  <div class="product-card" tabindex="0">
+    
+                    <figure class="card-banner">
+                      <a href="product28.html">
+                        <img src="./images/product-28.jpg" width="312" height="350" loading="lazy"
+                          alt="Running Sneaker Shoes" class="image-contain">
+                      </a>
+    
+                      <div class="card-badge">New</div>
+    
+                      
+                    </figure>
+    
+                    
+                    <div class="card-content">
+    
+                      <div class="card-cat">
+                        <p href="#" class="card-cat-link">Men</p> /
+                        <p href="#" class="card-cat-link">Sport</p>
+                      </div>
+    
+                      <h3 class="h3 card-title">
+                        <a href="./products/product28.html">Running Sneaker Shoes</a>
+                      </h3>
+    
+                      <data class="card-price" value="180.85">$180.85</data>
+    
+                    </div>
+    
+                  </div>
+                </li>
+
+                <li class="product-item">
+                  <div class="product-card" tabindex="0">
+    
+                    <figure class="card-banner">
+                      <a href="product27.html">
+                        <img src="./images/product-27.jpg" width="312" height="350" loading="lazy"
+                          alt="Running Sneaker Shoes" class="image-contain">
+                      </a>
+    
+                      <!-- <div class="card-badge">New</div> -->
+    
+                      
+                    </figure>
+    
+                    
+                    <div class="card-content">
+    
+                      <div class="card-cat">
+                        <p href="#" class="card-cat-link">Men</p> /
+                        <p href="#" class="card-cat-link">Sports</p>
+                      </div>
+    
+                      <h3 class="h3 card-title">
+                        <a href="./products/product27.html">Running Sneaker Shoes</a>
+                      </h3>
+    
+                      <data class="card-price" value="180.85">$180.85</data>
+    
+                    </div>
+    
+                  </div>
+                </li>
+
+                <li class="product-item">
+                  <div class="product-card" tabindex="0">
+    
+                    <figure class="card-banner">
+                      <a href="product4.html">
+                        <img src="./images/product-4.jpg" width="312" height="350" loading="lazy"
+                          alt="Running Sneaker Shoes" class="image-contain">
+                      </a>
+    
+                      <!-- <div class="card-badge">New</div> -->
+    
+                      
+                    </figure>
+    
+                    
+                    <div class="card-content">
+    
+                      <div class="card-cat">
+                        <p href="#" class="card-cat-link">Men</p> /
+                        <p href="#" class="card-cat-link">Sports</p>
+                      </div>
+    
+                      <h3 class="h3 card-title">
+                        <a href="./products/product1.html">Running Sneaker Shoes</a>
+                      </h3>
+    
+                      <data class="card-price" value="180.85">$180.85</data>
+    
+                    </div>
+    
+                  </div>
+                </li>
+
+                <li class="product-item">
+                  <div class="product-card" tabindex="0">
+    
+                    <figure class="card-banner">
+                      <a href="product29.html">
+                        <img src="./images/product-29.jpg" width="312" height="350" loading="lazy"
+                          alt="Running Sneaker Shoes" class="image-contain">
+                      </a>
+    
+                      <div class="card-badge">New</div>
+    
+                      
+                    </figure>
+    
+                    
+                    <div class="card-content">
+    
+                      <div class="card-cat">
+                        <p href="#" class="card-cat-link">Men</p> /
+                        <p href="#" class="card-cat-link">Women</p>
+                      </div>
+    
+                      <h3 class="h3 card-title">
+                        <a href="./products/product29.html">Running Sneaker Shoes</a>
+                      </h3>
+    
+                      <data class="card-price" value="180.85">$180.85</data>
+    
+                    </div>
+    
+                  </div>
+                </li>
+
+                <li class="product-item">
+                  <div class="product-card" tabindex="0">
+    
+                    <figure class="card-banner">
+                      <a href="product14.html">
+                        <img src="./images/product-14.jpg" width="312" height="350" loading="lazy"
+                          alt="Running Sneaker Shoes" class="image-contain">
+                      </a>
+    
+                      <div class="card-badge">New</div>
+    
+                      
+                    </figure>
+    
+                    
+                    <div class="card-content">
+    
+                      <div class="card-cat">
+                        <p href="#" class="card-cat-link">Men</p> /
+                        <p href="#" class="card-cat-link">Women</p>
+                      </div>
+    
+                      <h3 class="h3 card-title">
+                        <a href="./products/product1.html">Running Sneaker Shoes</a>
+                      </h3>
+    
+                      <data class="card-price" value="180.85">$180.85</data>
+    
+                    </div>
+    
+                  </div>
+                </li>
+
+                <li class="product-item">
+                  <div class="product-card" tabindex="0">
+    
+                    <figure class="card-banner">
+                      <a href="product6.html">
+                        <img src="./images/product-6.jpg" width="312" height="350" loading="lazy"
+                          alt="Running Sneaker Shoes" class="image-contain">
+                      </a>
+    
+                      <div class="card-badge">New</div>
+    
+                      
+                    </figure>
+    
+                    
+                    <div class="card-content">
+    
+                      <div class="card-cat">
+                        <p href="#" class="card-cat-link">Men</p> /
+                        <p href="#" class="card-cat-link">Women</p>
+                      </div>
+    
+                      <h3 class="h3 card-title">
+                        <a href="./products/product1.html">Running Sneaker Shoes</a>
+                      </h3>
+    
+                      <data class="card-price" value="180.85">$180.85</data>
+    
+                    </div>
+    
+                  </div>
+                </li>
+
+                <li class="product-item">
+                  <div class="product-card" tabindex="0">
+    
+                    <figure class="card-banner">
+                      <a href="product30.html">
+                        <img src="./images/product-30.jpg" width="312" height="350" loading="lazy"
+                          alt="Running Sneaker Shoes" class="image-contain">
+                      </a>
+    
+                      <div class="card-badge">New</div>
+    
+                      
+                    </figure>
+    
+                    
+                    <div class="card-content">
+    
+                      <div class="card-cat">
+                        <p href="#" class="card-cat-link">Men</p> /
+                        <p href="#" class="card-cat-link">Women</p>
+                      </div>
+    
+                      <h3 class="h3 card-title">
+                        <a href="./products/product30.html">Running Sneaker Shoes</a>
+                      </h3>
+    
+                      <data class="card-price" value="180.85">$180.85</data>
+    
+                    </div>
+    
+                  </div>
+                </li>
+
+                <li class="product-item">
+                  <div class="product-card" tabindex="0">
+    
+                    <figure class="card-banner">
+                      <a href="product22.html">
+                        <img src="./images/product-22.jpg" width="312" height="350" loading="lazy"
+                          alt="Running Sneaker Shoes" class="image-contain">
+                      </a>
+    
+                      <div class="card-badge">Limited</div>
+    
+                      
+                    </figure>
+    
+                    
+                    <div class="card-content">
+    
+                      <div class="card-cat">
+                        <p href="#" class="card-cat-link">Men</p> /
+                        <p href="#" class="card-cat-link">Women</p>
+                      </div>
+    
+                      <h3 class="h3 card-title">
+                        <a href="./products/product1.html">Running Sneaker Shoes</a>
+                      </h3>
+    
+                      <data class="card-price" value="180.85">$180.85</data>
+    
+                    </div>
+    
+                  </div>
+                </li>
+
+                <li class="product-item">
+                  <div class="product-card" tabindex="0">
+    
+                    <figure class="card-banner">
+                      <a href="product31.html">
+                        <img src="./images/product-31.jpg" width="312" height="350" loading="lazy"
+                          alt="Running Sneaker Shoes" class="image-contain">
+                      </a>
+    
+                      <div class="card-badge">New</div>
+    
+                      
+                    </figure>
+    
+                    
+                    <div class="card-content">
+    
+                      <div class="card-cat">
+                        <p href="#" class="card-cat-link">Men</p> /
+                        <p href="#" class="card-cat-link">Sports</p>
+                      </div>
+    
+                      <h3 class="h3 card-title">
+                        <a href="./products/product31.html">Running Sneaker Shoes</a>
+                      </h3>
+    
+                      <data class="card-price" value="180.85">$180.85</data>
+    
+                    </div>
+    
+                  </div>
+                </li>
+
+                <li class="product-item">
+                  <div class="product-card" tabindex="0">
+    
+                    <figure class="card-banner">
+                      <a href="product13.html">
+                        <img src="./images/product-13.jpg" width="312" height="350" loading="lazy"
+                          alt="Running Sneaker Shoes" class="image-contain">
+                      </a>
+    
+                      <div class="card-badge">New</div>
+    
+                      
+                    </figure>
+    
+                    
+                    <div class="card-content">
+    
+                      <div class="card-cat">
+                        <p href="#" class="card-cat-link">Men</p> /
+                        <p href="#" class="card-cat-link">Sports</p>
+                      </div>
+    
+                      <h3 class="h3 card-title">
+                        <a href="./products/product13.html">Running Sneaker Shoes</a>
+                      </h3>
+    
+                      <data class="card-price" value="180.85">$180.85</data>
+    
+                    </div>
+    
+                  </div>
+                </li>
+
+                <li class="product-item">
+                  <div class="product-card" tabindex="0">
+    
+                    <figure class="card-banner">
+                      <a href="product32.html">
+                        <img src="./images/product-32.jpg" width="312" height="350" loading="lazy"
+                          alt="Running Sneaker Shoes" class="image-contain">
+                      </a>
+    
+                      <!-- <div class="card-badge">New</div> -->
+    
+                      
+                    </figure>
+    
+                    
+                    <div class="card-content">
+    
+                      <div class="card-cat">
+                        <p href="#" class="card-cat-link">Men</p> /
+                        <p href="#" class="card-cat-link">Sports</p>
+                      </div>
+    
+                      <h3 class="h3 card-title">
+                        <a href="./products/product-32.html">Running Sneaker Shoes</a>
+                      </h3>
+    
+                      <data class="card-price" value="180.85">$180.85</data>
+    
+                    </div>
+    
+                  </div>
+                </li>
+    
+              </ul>
+    
+            </div>
+          </section>
+
+    </main>
+
+    <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="footer-top section">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <img
+              src="./images/logo.svg"
+              width="160"
+              height="50"
+              alt="Footcap logo"
+            />
+          </a>
+
+          <ul class="social-list">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-pinterest"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-link-box">
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Contact Us</p>
+            </li>
+
+            <li>
+              <address class="footer-link">
+                <ion-icon name="location"></ion-icon>
+
+                <span class="footer-link-text">
+                  2751 S Parker Rd, Aurora, CO 80014, United States
+                </span>
+              </address>
+            </li>
+
+            <li>
+              <a href="tel:+557343673257" class="footer-link">
+                <ion-icon name="call"></ion-icon>
+
+                <span class="footer-link-text">+557343673257</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="mailto:footcap@help.com" class="footer-link">
+                <ion-icon name="mail"></ion-icon>
+
+                <span class="footer-link-text">footcap@help.com</span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">My Account</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+
+              <span class="footer-link-text">My Account</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+
+              <span class="footer-link-text">View Cart</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+
+              <span class="footer-link-text">Wishlist</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+
+              <span class="footer-link-text">Compare</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+
+              <span class="footer-link-text">New Products</span>
+            </a>
+          </li>
+
+        </ul> -->
+
+          <div class="footer-list">
+            <p class="footer-list-title">Opening Time</p>
+
+            <table class="footer-table">
+              <tbody>
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Mon - Tue:</th>
+
+                  <td class="table-data">8AM - 10PM</td>
+                </tr>
+
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Wed:</th>
+
+                  <td class="table-data">8AM - 7PM</td>
+                </tr>
+
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Fri:</th>
+
+                  <td class="table-data">7AM - 12PM</td>
+                </tr>
+
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Sat:</th>
+
+                  <td class="table-data">9AM - 8PM</td>
+                </tr>
+
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Sun:</th>
+
+                  <td class="table-data">Closed</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="footer-list">
+            <p class="footer-list-title">Newsletter</p>
+
+            <p class="newsletter-text">
+              Authoritatively morph 24/7 potentialities with error-free
+              partnerships.
+            </p>
+
+            <form action="" class="newsletter-form">
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="Email Address"
+                class="newsletter-input"
+              />
+
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2022 <a href="#" class="copyright-link">codewithsadee</a>.
+          All Rights Reserved <br /><br />
+          (modified and extended for a Thesis Project of Polina Dorati & Réka
+          Vásárhelyi-Nagy)
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 
+  - #GO TO TOP
+-->
+
+  <a href="#top" class="go-top-btn" data-go-top>
+    <ion-icon name="arrow-up-outline"></ion-icon>
+  </a>
+
+  <!-- 
+  - custom js link
+-->
+  <script src="script.js"></script>
+
+  <!-- 
+  - ionicon link
+-->
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+    
+</body>
+</html>
+
+

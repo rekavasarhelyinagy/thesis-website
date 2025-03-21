@@ -194,6 +194,7 @@ body {
 
 .has-scrollbar {
   display: flex;
+  justify-content: center;
   gap: 25px;
   overflow-x: auto;
   padding-bottom: 20px;

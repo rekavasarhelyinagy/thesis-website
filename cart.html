@@ -153,6 +153,12 @@
         <script src="script.js"></script>
         <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
         <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+
+        <script>
+          let total = 123.45678;
+          document.getElementById("total-price").textContent = `Total: $${total.toFixed(2)}`;
+
+        </script>
     </main>
 
 </body>
