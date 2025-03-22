@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Women Collection</title>
+  <title>All Products</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -14,7 +14,7 @@
   <main>
     <section class="section product">
       <div class="container">
-        <h2 class="h2 section-title">Women Collection</h2>
+        <h2 class="h2 section-title">All Products</h2>
 
         <!-- PRODUCT LIST DYNAMICALLY LOADED HERE -->
         <ul class="product-list" id="product-list"></ul>
@@ -69,7 +69,7 @@
     }
 
     // LOAD PRODUCTS FROM JSON
-    fetch('women-products.json')
+    fetch('all-products.json')
       .then(res => res.json())
       .then(products => {
         const list = document.getElementById('product-list');
@@ -90,6 +90,7 @@
                   ${badgeHTML}
                 </figure>
                 <div class="card-content">
+                  
                   <h3 class="h3 card-title">
                     <a href="${product.link}">${product.title}</a>
                   </h3>

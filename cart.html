@@ -17,113 +17,12 @@
 </head>
 
 <body onload="loadCartItems()">
-    <header class="header" data-header>
-        <div class="container">
     
-          <div class="overlay" data-overlay></div>
-    
-          <a href="index.html" class="logo">
-            <img src="../images/logo.svg" width="160" height="50" alt="Footcap logo">
-          </a>
-    
-          <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
-            <ion-icon name="menu-outline"></ion-icon>
-          </button>
-    
-          <nav class="navbar" data-navbar>
-    
-            <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-    
-            <a href="#" class="logo">
-              <img src="../images/logo.svg" width="190" height="50" alt="Footcap logo">
-            </a>
-            
-            <ul class="navbar-list">
-    
-              <li class="navbar-item">
-                <a href="#" class="navbar-link">Home</a>
-              </li>
-    
-              <li class="navbar-item">
-                <a href="#" class="navbar-link">About</a>
-              </li>
-    
-              <li class="navbar-item">
-                <a href="#" class="navbar-link">Products</a>
-              </li>
-    
-              <li class="navbar-item">
-                <a href="#" class="navbar-link">Shop</a>
-              </li>
-    
-              <li class="navbar-item">
-                <a href="#" class="navbar-link">Blog</a>
-              </li>
-    
-              <li class="navbar-item">
-                <a href="#" class="navbar-link">Contact</a>
-              </li>
-    
-            </ul>
-    
-            <ul class="nav-action-list">
-    
-              <!-- <li>
-                <button class="nav-action-btn">
-                  <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
-    
-                  <span class="nav-action-text">Search</span>
-                </button>
-              </li>
-    
-              <li>
-                <a href="#" class="nav-action-btn">
-                  <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-    
-                  <span class="nav-action-text">Login / Register</span>
-                </a>
-              </li> -->
-    
-              <!-- <li>
-                <button class="nav-action-btn">
-                  <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
-    
-                  <span class="nav-action-text">Wishlist</span>
-    
-                  <data class="nav-action-badge" value="5" aria-hidden="true">5</data>
-                </button>
-              </li> -->
-    
-              <!-- <li class="cart-container">
-                <button class="nav-action-btn">
-                  <ion-icon name="bag-outline"></ion-icon>
-                  <data id="cart-badge" value="0">0</data>  Cart badge value
-                </button>
-              </li> -->
-    
-              
-              <div class="cart-icon">
-                  <a href="cart.html">
-                    <button class="nav-action-btn">
-                    <ion-icon name="bag-outline" ></ion-icon>
-                    </button>
-                  </a>
-                  <span class="cart-number-style" id="cart-count">0</span>
-              </div>
-    
-    
-            </ul>
-    
-          </nav>
-    
-        </div>
-    </header>
+    <div id="header"></div>
       
     <main class="margin-top">
-        <h2>Your Cart</h2>
-        <div class="cart-container">
+      <h2 class="h2 section-title">Cart</h2>
+      <div class="cart-container">
             <!-- Cart Items Section -->
             <div class="cart-items-section">
               <div id="cart-items">
@@ -150,16 +49,57 @@
             </div>
         </div>
 
-        <script src="script.js"></script>
-        <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
-        <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+        
+    </main>
 
-        <script>
+    <div id="footer"></div>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+
+    <script>
           let total = 123.45678;
           document.getElementById("total-price").textContent = `Total: $${total.toFixed(2)}`;
+    </script>
 
-        </script>
-    </main>
+    <!-- Attach Header and Footer -->
+    <script>
+      // Load header first
+      fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('header').innerHTML = data;
+
+          // NOW you can safely run cart logic
+          initializeCart(); 
+        });
+
+      // Load footer (not related to cart logic)
+      fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('footer').innerHTML = data;
+        });
+
+      // Define your cart logic
+      function initializeCart() {
+        const cartButton = document.getElementById('cart-count');
+        
+        // Fake example: set initial count
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cartButton.textContent = cart.length;
+
+        // Listen for adding items elsewhere on your site
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+          button.addEventListener('click', () => {
+            cart.push('newItem'); // Replace with actual item logic
+            localStorage.setItem('cart', JSON.stringify(cart));
+            cartButton.textContent = cart.length;
+          });
+        });
+      }
+    </script>
 
 </body>
 </html>

@@ -15,107 +15,7 @@
 </head>
 <body>
 
-  <header class="header" data-header>
-    <div class="container">
-
-      <div class="overlay" data-overlay></div>
-
-      <a href="index.html" class="logo">
-        <img src="../images/logo.svg" width="160" height="50" alt="Footcap logo">
-      </a>
-
-      <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
-        <ion-icon name="menu-outline"></ion-icon>
-      </button>
-
-      <nav class="navbar" data-navbar>
-
-        <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
-          <ion-icon name="close-outline"></ion-icon>
-        </button>
-
-        <a href="#" class="logo">
-          <img src="../images/logo.svg" width="190" height="50" alt="Footcap logo">
-        </a>
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <a href="#" class="navbar-link">Home</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#" class="navbar-link">About</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#" class="navbar-link">Products</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#" class="navbar-link">Shop</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#" class="navbar-link">Blog</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#" class="navbar-link">Contact</a>
-          </li>
-
-        </ul>
-
-        <ul class="nav-action-list">
-
-          <!-- <li>
-            <button class="nav-action-btn">
-              <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
-
-              <span class="nav-action-text">Search</span>
-            </button>
-          </li>
-
-          <li>
-            <a href="#" class="nav-action-btn">
-              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-
-              <span class="nav-action-text">Login / Register</span>
-            </a>
-          </li> -->
-
-          <!-- <li>
-            <button class="nav-action-btn">
-              <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
-
-              <span class="nav-action-text">Wishlist</span>
-
-              <data class="nav-action-badge" value="5" aria-hidden="true">5</data>
-            </button>
-          </li> -->
-
-          <!-- <li class="cart-container">
-            <button class="nav-action-btn">
-              <ion-icon name="bag-outline"></ion-icon>
-              <data id="cart-badge" value="0">0</data>  Cart badge value
-            </button>
-          </li> -->
-
-          <div class="cart-icon">
-            <a href="cart.html">
-            <button class="nav-action-btn">
-            <ion-icon name="bag-outline" ></ion-icon>
-            </button>
-            </a>
-            <span class="cart-number-style" id="cart-count">0</span>
-          </div>
-
-        </ul>
-
-      </nav>
-
-    </div>
-  </header>
+  <div id="header"></div>
   
     <div class="product-container">
         <div class="product-image">
@@ -124,18 +24,19 @@
         </div>
 
         <div class="product-details">
-            <h1 class="product-title">Air Jordan 7 Retro</h1>
+            <h1 class="product-title">Lightweight Tennis Shoeso</h1>
             <p class="product-sku">SKU: sk2407232792486791</p>
             <div class="product-rating">
                 <span>⭐⭐⭐⭐⭐ (100+ Reviews)</span>
             </div>
-            <p class="product-price">170.85$</p>
+            <p class="product-price">140.75$</p>
 
             <div class="product-options">
                 <label>Color:</label>
                 <div class="product-colors">
+                  
                   <svg width="40" height="40">
-                    <circle cx="20" cy="20" r="18" stroke="black" stroke-width="2" fill="white" />
+                    <circle cx="20" cy="20" r="18" stroke="black" stroke-width="2" fill="orange" />
                   </svg>
                 </div>
             </div>
@@ -172,205 +73,7 @@
 
     
 
-    <footer class="footer">
-
-      <div class="footer-top section">
-        <div class="container">
-  
-          <div class="footer-brand">
-  
-            <a href="#" class="logo">
-              <img src="../images/logo.svg" width="160" height="50" alt="Footcap logo">
-            </a>
-  
-            <ul class="social-list">
-  
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-facebook"></ion-icon>
-                </a>
-              </li>
-  
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-twitter"></ion-icon>
-                </a>
-              </li>
-  
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-pinterest"></ion-icon>
-                </a>
-              </li>
-  
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-linkedin"></ion-icon>
-                </a>
-              </li>
-  
-            </ul>
-  
-          </div>
-  
-          <div class="footer-link-box">
-  
-            <ul class="footer-list">
-  
-              <li>
-                <p class="footer-list-title">Contact Us</p>
-              </li>
-  
-              <li>
-                <address class="footer-link">
-                  <ion-icon name="location"></ion-icon>
-  
-                  <span class="footer-link-text">
-                    2751 S Parker Rd, Aurora, CO 80014, United States
-                  </span>
-                </address>
-              </li>
-  
-              <li>
-                <a href="tel:+557343673257" class="footer-link">
-                  <ion-icon name="call"></ion-icon>
-  
-                  <span class="footer-link-text">+557343673257</span>
-                </a>
-              </li>
-  
-              <li>
-                <a href="mailto:footcap@help.com" class="footer-link">
-                  <ion-icon name="mail"></ion-icon>
-  
-                  <span class="footer-link-text">footcap@help.com</span>
-                </a>
-              </li>
-  
-            </ul>
-  
-            <!-- <ul class="footer-list">
-  
-              <li>
-                <p class="footer-list-title">My Account</p>
-              </li>
-  
-              <li>
-                <a href="#" class="footer-link">
-                  <ion-icon name="chevron-forward-outline"></ion-icon>
-  
-                  <span class="footer-link-text">My Account</span>
-                </a>
-              </li>
-  
-              <li>
-                <a href="#" class="footer-link">
-                  <ion-icon name="chevron-forward-outline"></ion-icon>
-  
-                  <span class="footer-link-text">View Cart</span>
-                </a>
-              </li>
-  
-              <li>
-                <a href="#" class="footer-link">
-                  <ion-icon name="chevron-forward-outline"></ion-icon>
-  
-                  <span class="footer-link-text">Wishlist</span>
-                </a>
-              </li>
-  
-              <li>
-                <a href="#" class="footer-link">
-                  <ion-icon name="chevron-forward-outline"></ion-icon>
-  
-                  <span class="footer-link-text">Compare</span>
-                </a>
-              </li>
-  
-              <li>
-                <a href="#" class="footer-link">
-                  <ion-icon name="chevron-forward-outline"></ion-icon>
-  
-                  <span class="footer-link-text">New Products</span>
-                </a>
-              </li>
-  
-            </ul> -->
-  
-            <div class="footer-list">
-  
-              <p class="footer-list-title">Opening Time</p>
-  
-              <table class="footer-table">
-                <tbody>
-  
-                  <tr class="table-row">
-                    <th class="table-head" scope="row">Mon - Tue:</th>
-  
-                    <td class="table-data">8AM - 10PM</td>
-                  </tr>
-  
-                  <tr class="table-row">
-                    <th class="table-head" scope="row">Wed:</th>
-  
-                    <td class="table-data">8AM - 7PM</td>
-                  </tr>
-  
-                  <tr class="table-row">
-                    <th class="table-head" scope="row">Fri:</th>
-  
-                    <td class="table-data">7AM - 12PM</td>
-                  </tr>
-  
-                  <tr class="table-row">
-                    <th class="table-head" scope="row">Sat:</th>
-  
-                    <td class="table-data">9AM - 8PM</td>
-                  </tr>
-  
-                  <tr class="table-row">
-                    <th class="table-head" scope="row">Sun:</th>
-  
-                    <td class="table-data">Closed</td>
-                  </tr>
-  
-                </tbody>
-              </table>
-  
-            </div>
-  
-            <div class="footer-list">
-  
-              <p class="footer-list-title">Newsletter</p>
-  
-              <p class="newsletter-text">
-                Authoritatively morph 24/7 potentialities with error-free partnerships.
-              </p>
-  
-              <form action="" class="newsletter-form">
-                <input type="email" name="email" required placeholder="Email Address" class="newsletter-input">
-  
-                <button type="submit" class="btn btn-primary">Subscribe</button>
-              </form>
-  
-            </div>
-  
-          </div>
-  
-        </div>
-      </div>
-  
-      <div class="footer-bottom">
-        <div class="container">
-  
-          <p class="copyright">
-            &copy; 2022 <a href="#" class="copyright-link">codewithsadee</a>. All Rights Reserved
-          </p>
-  
-        </div>
-      </div>
-  
-    </footer>
+    <div id="footer"></div>
   
     <script src="script.js"></script>
 
@@ -398,8 +101,8 @@
     
         cart.push({
           image: 'images/product-4.jpg',
-          name: 'Air Jordan 7 Retro',
-          price: 170.85,
+          name: 'Lightweight Tennis Shoes',
+          price: 140.75,
           size: selectedSize // size retrieved from sessionStorage
         });
     
@@ -463,5 +166,44 @@
     });
     
     </script>
+
+    <!-- Attach Header and Footer -->
+    <script>
+      // Load header first
+      fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('header').innerHTML = data;
+
+          // NOW you can safely run cart logic
+          initializeCart(); 
+        });
+
+      // Load footer (not related to cart logic)
+      fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('footer').innerHTML = data;
+        });
+
+      // Define your cart logic
+      function initializeCart() {
+        const cartButton = document.getElementById('cart-count');
+        
+        // Fake example: set initial count
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cartButton.textContent = cart.length;
+
+        // Listen for adding items elsewhere on your site
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+          button.addEventListener('click', () => {
+            cart.push('newItem'); // Replace with actual item logic
+            localStorage.setItem('cart', JSON.stringify(cart));
+            cartButton.textContent = cart.length;
+          });
+        });
+      }
+    </script>
+
 </body>
 </html>

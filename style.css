@@ -1570,7 +1570,9 @@ a.footer-link:is(:hover, :focus) { color: var(--bittersweet); }
 
 
 
-
+.section-title {
+  text-align: center;
+}
 
 
 /* Cart Container Layout */
