@@ -14,7 +14,7 @@
   <main>
     <section class="section product">
       <div class="container">
-        <h2 class="h2 section-title">Men Collection</h2>
+        <h2 class="h2 section-title">All Products</h2>
 
         <!-- PRODUCT LIST DYNAMICALLY LOADED HERE -->
         <ul class="product-list" id="product-list"></ul>
@@ -69,7 +69,7 @@
     }
 
     // LOAD PRODUCTS FROM JSON
-    fetch('men-products.json')
+    fetch('all-products.json')
       .then(res => res.json())
       .then(products => {
         const list = document.getElementById('product-list');
@@ -84,7 +84,7 @@
             <li class="product-item">
               <div class="product-card" tabindex="0">
                 <figure class="card-banner">
-                  <a href="product-m.html?id=${product.id}">
+                  <a href="product-all.html?id=${product.id}">
                     <img src="${product.image}" width="312" height="350" loading="lazy" alt="${product.title}" class="image-contain">
                   </a>
                   ${badgeHTML}

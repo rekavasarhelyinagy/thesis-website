@@ -1801,3 +1801,27 @@ a.footer-link:is(:hover, :focus) { color: var(--bittersweet); }
 .margin-top {
   margin-top: 30px;
 }
+
+
+/* added to cart */
+
+.cart-message {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--bittersweet); /* Green success color */
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  font-family: var(--ff-roboto);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 1000;
+}
+
+.cart-message.show {
+  opacity: 1;
+  pointer-events: auto;
+}

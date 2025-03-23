@@ -1,163 +1,192 @@
 [
-    {
-      "id": "product3",
-      "title": "Red Air Max",
-      "price": "145.00",
-      "oldPrice": null,
-      "category": ["Women", "Running"],
-      "badge": "New",
-      "image": "./images/product-3.jpg",
-      "link": "product3.html"
-    },
-    {
-      "id": "product14",
-      "title": "Vans Sneakers",
-      "price": "95.50",
-      "oldPrice": "110.00",
-      "category": ["Women", "Casual"],
-      "badge": "-13%",
-      "image": "./images/product-14.jpg",
-      "link": "product14.html"
-    },
-    {
-      "id": "product7",
-      "title": "Cross Training Shoes",
-      "price": "125.00",
-      "oldPrice": "150.00",
-      "category": ["Women", "Gym"],
-      "badge": "-17%",
-      "image": "./images/product-7.jpg",
-      "link": "product7.html"
-    },
-    {
-      "id": "product25",
-      "title": "Classic Leather Boots",
-      "price": "160.00",
-      "oldPrice": null,
-      "category": ["Women", "Fashion"],
-      "badge": "New",
-      "image": "./images/product-25.jpg",
-      "link": "product25.html"
-    },
-    {
-      "id": "product26",
-      "title": "Butterfly Heels",
-      "price": "130.90",
-      "oldPrice": "155.00",
-      "category": ["Women", "Casual"],
-      "badge": "-15%",
-      "image": "./images/product-26.jpg",
-      "link": "product26.html"
-    },
-    {
-      "id": "product28",
-      "title": "Adidas Sneakers",
-      "price": "110.00",
-      "oldPrice": null,
-      "category": ["Women", "Running"],
-      "badge": null,
-      "image": "./images/product-28.jpg",
-      "link": "product28.html"
-    },
-    {
-      "id": "product27",
-      "title": "Bohem Heels",
-      "price": "180.25",
-      "oldPrice": "200.00",
-      "category": ["Women", "Outdoor"],
-      "badge": "-10%",
-      "image": "./images/product-27.jpg",
-      "link": "product27.html"
-    },
-    {
-      "id": "product4",
-      "title": "Lightweight Tennis Shoes",
-      "price": "140.75",
-      "oldPrice": "160.00",
-      "category": ["Women", "Sports"],
-      "badge": "-12%",
-      "image": "./images/product-4.jpg",
-      "link": "product4.html"
-    },
-    {
-      "id": "product29",
-      "title": "Calvin Klein Platform",
-      "price": "105.40",
-      "oldPrice": null,
-      "category": ["Women", "Casual"],
-      "badge": null,
-      "image": "./images/product-29.jpg",
-      "link": "product29.html"
-    },
-    {
-      "id": "product24",
-      "title": "Elevated Sporty Sneakers",
-      "price": "150.00",
-      "oldPrice": "170.00",
-      "category": ["Women", "Fashion"],
-      "badge": "-12%",
-      "image": "./images/product-24.jpg",
-      "link": "product24.html"
-    },
-    {
-      "id": "product6",
-      "title": "Red Sport Sneakers",
-      "price": "199.99",
-      "oldPrice": null,
-      "category": ["Men", "Outdoor"],
-      "badge": null,
-      "image": "./images/product-6.jpg",
-      "link": "product6.html"
-    },
-    {
-      "id": "product30",
-      "title": "Birkenstock Homewear",
-      "price": "112.20",
-      "oldPrice": "130.00",
-      "category": ["Women", "Comfort"],
-      "badge": "-14%",
-      "image": "./images/product-30.jpg",
-      "link": "product30.html"
-    },
-    {
-      "id": "product22",
-      "title": "Breathable Gym Trainers",
-      "price": "130.25",
-      "oldPrice": null,
-      "category": ["Women", "Gym"],
-      "badge": "New",
-      "image": "./images/product-22.jpg",
-      "link": "product22.html"
-    },
-    {
-      "id": "product31",
-      "title": "Colorful Sporty Sneakers",
-      "price": "149.99",
-      "oldPrice": null,
-      "category": ["Women", "Streetwear"],
-      "badge": "New",
-      "image": "./images/product-31.jpg",
-      "link": "product31.html"
-    },
-    {
-      "id": "product13",
-      "title": "Premium Leather Sneakers",
-      "price": "220.00",
-      "oldPrice": null,
-      "category": ["Men", "Outdoor"],
-      "badge": null,
-      "image": "./images/product-13.jpg",
-      "link": "product13.html"
-    },
-    {
-      "id": "product32",
-      "title": "Black Elegant Heels",
-      "price": "138.80",
-      "oldPrice": "155.00",
-      "category": ["Women", "Running"],
-      "badge": "-10%",
-      "image": "./images/product-32.jpg",
-      "link": "product32.html"
-    }
-  ]
-  
+  {
+    "id": "product3",
+    "title": "Red Air Max",
+    "price": "145.00",
+    "oldPrice": null,
+    "category": ["Women", "Running"],
+    "badge": "New",
+    "image": "./images/product-3.jpg",
+    "link": "product3.html",
+    "rating": 5,
+    "color": "red"
+  },
+  {
+    "id": "product14",
+    "title": "Vans Sneakers",
+    "price": "95.50",
+    "oldPrice": "110.00",
+    "category": ["Women", "Casual"],
+    "badge": "-13%",
+    "image": "./images/product-14.jpg",
+    "link": "product14.html",
+    "rating": 5,
+    "color": "red"
+  },
+  {
+    "id": "product7",
+    "title": "Cross Training Shoes",
+    "price": "125.00",
+    "oldPrice": "150.00",
+    "category": ["Women", "Gym"],
+    "badge": "-17%",
+    "image": "./images/product-7.jpg",
+    "link": "product7.html",
+    "rating": 5,
+    "color": "pink"
+  },
+  {
+    "id": "product25",
+    "title": "Classic Leather Boots",
+    "price": "160.00",
+    "oldPrice": null,
+    "category": ["Women", "Fashion"],
+    "badge": "New",
+    "image": "./images/product-25.jpg",
+    "link": "product25.html",
+    "rating": 5,
+    "color": "brown"
+  },
+  {
+    "id": "product26",
+    "title": "Butterfly Heels",
+    "price": "130.90",
+    "oldPrice": "155.00",
+    "category": ["Women", "Casual"],
+    "badge": "-15%",
+    "image": "./images/product-26.jpg",
+    "link": "product26.html",
+    "rating": 5,
+    "color": "white"
+  },
+  {
+    "id": "product28",
+    "title": "Adidas Sneakers",
+    "price": "110.00",
+    "oldPrice": null,
+    "category": ["Women", "Running"],
+    "badge": null,
+    "image": "./images/product-28.jpg",
+    "link": "product28.html",
+    "rating": 5,
+    "color": "white"
+  },
+  {
+    "id": "product27",
+    "title": "Bohem Heels",
+    "price": "180.25",
+    "oldPrice": "200.00",
+    "category": ["Women", "Outdoor"],
+    "badge": "-10%",
+    "image": "./images/product-27.jpg",
+    "link": "product27.html",
+    "rating": 5,
+    "color": "white"
+  },
+  {
+    "id": "product4",
+    "title": "Lightweight Tennis Shoes",
+    "price": "140.75",
+    "oldPrice": "160.00",
+    "category": ["Women", "Sports"],
+    "badge": "-12%",
+    "image": "./images/product-4.jpg",
+    "link": "product4.html",
+    "rating": 5,
+    "color": "orange"
+  },
+  {
+    "id": "product29",
+    "title": "Calvin Klein Platform",
+    "price": "105.40",
+    "oldPrice": null,
+    "category": ["Women", "Casual"],
+    "badge": null,
+    "image": "./images/product-29.jpg",
+    "link": "product29.html",
+    "rating": 5,
+    "color": "grey"
+  },
+  {
+    "id": "product24",
+    "title": "Elevated Sporty Sneakers",
+    "price": "150.00",
+    "oldPrice": "170.00",
+    "category": ["Women", "Fashion"],
+    "badge": "-12%",
+    "image": "./images/product-24.jpg",
+    "link": "product24.html"
+  },
+  {
+    "id": "product6",
+    "title": "Red Sport Sneakers",
+    "price": "199.99",
+    "oldPrice": null,
+    "category": ["Men", "Outdoor"],
+    "badge": null,
+    "image": "./images/product-6.jpg",
+    "link": "product6.html",
+    "rating": 5,
+    "color": "blue"
+  },
+  {
+    "id": "product30",
+    "title": "Birkenstock Homewear",
+    "price": "112.20",
+    "oldPrice": "130.00",
+    "category": ["Women", "Comfort"],
+    "badge": "-14%",
+    "image": "./images/product-30.jpg",
+    "link": "product30.html",
+    "rating": 5,
+    "color": "brown"
+  },
+  {
+    "id": "product22",
+    "title": "Breathable Gym Trainers",
+    "price": "130.25",
+    "oldPrice": null,
+    "category": ["Women", "Gym"],
+    "badge": "New",
+    "image": "./images/product-22.jpg",
+    "link": "product22.html",
+    "rating": 5,
+    "color": "black"
+  },
+  {
+    "id": "product31",
+    "title": "Colorful Sporty Sneakers",
+    "price": "149.99",
+    "oldPrice": null,
+    "category": ["Women", "Streetwear"],
+    "badge": "New",
+    "image": "./images/product-31.jpg",
+    "link": "product31.html",
+    "rating": 5,
+    "color": "lightblue"
+  },
+  {
+    "id": "product13",
+    "title": "Premium Leather Sneakers",
+    "price": "220.00",
+    "oldPrice": null,
+    "category": ["Men", "Outdoor"],
+    "badge": null,
+    "image": "./images/product-13.jpg",
+    "link": "product13.html",
+    "rating": 5,
+    "color": "brown"
+  },
+  {
+    "id": "product32",
+    "title": "Black Elegant Heels",
+    "price": "138.80",
+    "oldPrice": "155.00",
+    "category": ["Women", "Running"],
+    "badge": "-10%",
+    "image": "./images/product-32.jpg",
+    "link": "product32.html",
+    "rating": 5,
+    "color": "black"
+  }
+]

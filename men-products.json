@@ -1,165 +1,196 @@
 [
-    {
-      "id": "product1",
-      "title": "Running Sneaker Shoes",
-      "price": "180.85",
-      "oldPrice": null,
-      "category": ["Men", "Women"],
-      "badge": "New",
-      "image": "./images/product-1.jpg",
-      "link": "product1.html"
-    },
-    {
-      "id": "product34",
-      "title": "Autumn Street Casual",
-      "price": "190.85",
-      "oldPrice": null,
-      "category": ["Men", "Sports"],
-      "badge": null,
-      "image": "./images/product-34.jpg",
-      "link": "product34.html"
-    },
-    {
-      "id": "product2",
-      "title": "Leather Mens Slipper",
-      "price": "170.85",
-      "oldPrice": "200.21",
-      "category": ["Men", "Sports"],
-      "badge": "-25%",
-      "image": "./images/product-2.jpg",
-      "link": "product2.html"
-    },
-    {
-      "id": "product19",
-      "title": "Air Max Tennis",
-      "price": "170.85",
-      "oldPrice": "200.21",
-      "category": ["Men", "Sports"],
-      "badge": "-25%",
-      "image": "./images/product-19.jpg",
-      "link": "product19.html"
-    },
-    {
-      "id": "product18",
-      "title": "Waterproof Sneakers",
-      "price": "160.50",
-      "oldPrice": null,
-      "category": ["Women", "Sports"],
-      "badge": "New",
-      "image": "./images/product-18.jpg",
-      "link": "product18.html"
-    },
-    {
-      "id": "product10",
-      "title": "Urban Casual Sneakers",
-      "price": "120.00",
-      "oldPrice": "150.00",
-      "category": ["Men", "Casual"],
-      "badge": "-20%",
-      "image": "./images/product-10.jpg",
-      "link": "product10.html"
-    },
-    {
-      "id": "product33",
-      "title": "Classic Leather Boots",
-      "price": "210.95",
-      "oldPrice": null,
-      "category": ["Men", "Formal"],
-      "badge": null,
-      "image": "./images/product-33.jpg",
-      "link": "product33.html"
-    },
-    {
-      "id": "product4",
-      "title": "Lightweight Tennis Shoes",
-      "price": "140.75",
-      "oldPrice": "160.00",
-      "category": ["Women", "Sports"],
-      "badge": "-12%",
-      "image": "./images/product-4.jpg",
-      "link": "product4.html"
-    },
-    {
-      "id": "product5",
-      "title": "Neon Basketball Shoes",
-      "price": "185.00",
-      "oldPrice": null,
-      "category": ["Men", "Sports"],
-      "badge": "New",
-      "image": "./images/product-5.jpg",
-      "link": "product5.html"
-    },
-    {
-      "id": "product14",
-      "title": "Vans Sneakers",
-      "price": "95.50",
-      "oldPrice": "110.00",
-      "category": ["Women", "Casual"],
-      "badge": "-13%",
-      "image": "./images/product-14.jpg",
-      "link": "product14.html"
-    },
-    {
-      "id": "product6",
-      "title": "Red Sport Sneakers",
-      "price": "199.99",
-      "oldPrice": null,
-      "category": ["Men", "Outdoor"],
-      "badge": null,
-      "image": "./images/product-6.jpg",
-      "link": "product6.html"
-    },
-    {
-      "id": "product20",
-      "title": "Air Jordan White",
-      "price": "155.35",
-      "oldPrice": "180.00",
-      "category": ["Women", "Fashion"],
-      "badge": "-14%",
-      "image": "./images/product-20.jpg",
-      "link": "product20.html"
-    },
-    {
-      "id": "product22",
-      "title": "Rainbow Gym Trainers",
-      "price": "130.25",
-      "oldPrice": null,
-      "category": ["Men", "Gym"],
-      "badge": "New",
-      "image": "./images/product-22.jpg",
-      "link": "product22.html"
-    },
-    {
-      "id": "product8",
-      "title": "Everyday Comfort Loafers",
-      "price": "110.80",
-      "oldPrice": "135.00",
-      "category": ["Women", "Casual"],
-      "badge": "-18%",
-      "image": "./images/product-8.jpg",
-      "link": "product8.html"
-    },
-    {
-      "id": "product13",
-      "title": "Premium Leather Sneakers",
-      "price": "220.00",
-      "oldPrice": null,
-      "category": ["Men", "Outdoor"],
-      "badge": null,
-      "image": "./images/product-13.jpg",
-      "link": "product13.html"
-    },
-    {
-      "id": "product23",
-      "title": "Stylish Knit Runners",
-      "price": "145.60",
-      "oldPrice": "165.00",
-      "category": ["Women", "Running"],
-      "badge": "-12%",
-      "image": "./images/product-23.jpg",
-      "link": "product23.html"
-    }
-  ]
-    
+  {
+    "id": "product1",
+    "title": "Running Sneaker Shoes",
+    "price": "180.85",
+    "oldPrice": null,
+    "category": ["Men", "Women"],
+    "badge": "New",
+    "image": "./images/product-1.jpg",
+    "link": "product1.html",
+    "rating": 5,
+    "color": "lightblue"
+  },
+  {
+    "id": "product34",
+    "title": "Autumn Street Casual",
+    "price": "190.85",
+    "oldPrice": null,
+    "category": ["Men", "Sports"],
+    "badge": null,
+    "image": "./images/product-34.jpg",
+    "link": "product34.html",
+    "rating": 5,
+    "color": "brown"
+  },
+  {
+    "id": "product2",
+    "title": "Leather Mens Slipper",
+    "price": "170.85",
+    "oldPrice": "200.21",
+    "category": ["Men", "Sports"],
+    "badge": "-25%",
+    "image": "./images/product-2.jpg",
+    "link": "product2.html",
+    "rating": 5,
+    "color": "darkblue"
+  },
+  {
+    "id": "product19",
+    "title": "Air Max Tennis",
+    "price": "170.85",
+    "oldPrice": "200.21",
+    "category": ["Men", "Sports"],
+    "badge": "-25%",
+    "image": "./images/product-19.jpg",
+    "link": "product19.html",
+    "rating": 4,
+    "color": "white"
+  },
+  {
+    "id": "product18",
+    "title": "Waterproof Sneakers",
+    "price": "160.50",
+    "oldPrice": null,
+    "category": ["Women", "Sports"],
+    "badge": "New",
+    "image": "./images/product-18.jpg",
+    "link": "product18.html",
+    "rating": 5,
+    "color": "white"
+  },
+  {
+    "id": "product10",
+    "title": "Urban Casual Sneakers",
+    "price": "120.00",
+    "oldPrice": "150.00",
+    "category": ["Men", "Casual"],
+    "badge": "-20%",
+    "image": "./images/product-10.jpg",
+    "link": "product10.html",
+    "rating": 5,
+    "color": "black"
+  },
+  {
+    "id": "product33",
+    "title": "Classic Leather Boots",
+    "price": "210.95",
+    "oldPrice": null,
+    "category": ["Men", "Formal"],
+    "badge": null,
+    "image": "./images/product-33.jpg",
+    "link": "product33.html",
+    "rating": 5,
+    "color": "brown"
+  },
+  {
+    "id": "product4",
+    "title": "Lightweight Tennis Shoes",
+    "price": "140.75",
+    "oldPrice": "160.00",
+    "category": ["Women", "Sports"],
+    "badge": "-12%",
+    "image": "./images/product-4.jpg",
+    "link": "product4.html",
+    "rating": 5,
+    "color": "white"
+  },
+  {
+    "id": "product5",
+    "title": "Neon Basketball Shoes",
+    "price": "185.00",
+    "oldPrice": null,
+    "category": ["Men", "Sports"],
+    "badge": "New",
+    "image": "./images/product-5.jpg",
+    "link": "product5.html",
+    "rating": 5,
+    "color": "lightgreen"
+  },
+  {
+    "id": "product14",
+    "title": "Vans Sneakers",
+    "price": "95.50",
+    "oldPrice": "110.00",
+    "category": ["Women", "Casual"],
+    "badge": "-13%",
+    "image": "./images/product-14.jpg",
+    "link": "product14.html",
+    "rating": 5,
+    "color": "red"
+  },
+  {
+    "id": "product6",
+    "title": "Red Sport Sneakers",
+    "price": "199.99",
+    "oldPrice": null,
+    "category": ["Men", "Outdoor"],
+    "badge": null,
+    "image": "./images/product-6.jpg",
+    "link": "product6.html",
+    "rating": 5,
+    "color": "red"
+  },
+  {
+    "id": "product20",
+    "title": "Air Jordan White",
+    "price": "155.35",
+    "oldPrice": "180.00",
+    "category": ["Women", "Fashion"],
+    "badge": "-14%",
+    "image": "./images/product-20.jpg",
+    "link": "product20.html",
+    "rating": 5,
+    "color": "white"
+  },
+  {
+    "id": "product22",
+    "title": "Rainbow Gym Trainers",
+    "price": "130.25",
+    "oldPrice": null,
+    "category": ["Men", "Gym"],
+    "badge": "New",
+    "image": "./images/product-22.jpg",
+    "link": "product22.html",
+    "rating": 5,
+    "color": "pink"
+  },
+  {
+    "id": "product8",
+    "title": "Everyday Comfort Loafers",
+    "price": "110.80",
+    "oldPrice": "135.00",
+    "category": ["Women", "Casual"],
+    "badge": "-18%",
+    "image": "./images/product-8.jpg",
+    "link": "product8.html",
+    "rating": 5,
+    "color": "lightblue"
+  },
+  {
+    "id": "product13",
+    "title": "Premium Leather Sneakers",
+    "price": "220.00",
+    "oldPrice": null,
+    "category": ["Men", "Outdoor"],
+    "badge": null,
+    "image": "./images/product-13.jpg",
+    "link": "product13.html",
+    "rating": 5,
+    "color": "brown"
+  },
+  {
+    "id": "product23",
+    "title": "Stylish Knit Runners",
+    "price": "145.60",
+    "oldPrice": "165.00",
+    "category": ["Women", "Running"],
+    "badge": "-12%",
+    "image": "./images/product-23.jpg",
+    "link": "product23.html",
+    "rating": 5,
+    "color": "green"
+  }
+]
   
-  
+
