@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Loading...</title>
-  <link rel="stylesheet" href="load1.css">
-  <script>
-    document.addEventListener("DOMContentLoaded", function(){
-      setTimeout(function(){
-        const returnPage = sessionStorage.getItem("returnPage");
-        window.location.href = returnPage ? ".." + returnPage : "./product1.html";
-      }, 1000); // exactly 2 seconds before redirecting back
-    });
-  </script>
-</head>
-<body>
-  <div class="fullscreen-bg">
-    <!-- Loading spinner or text here -->
-    
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Loading...</title>
+    <link rel="stylesheet" href="load1.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(function () {
+          const returnPage = sessionStorage.getItem("returnPage");
+          window.location.href = returnPage
+            ? ".." + returnPage
+            : "./product1.html";
+        }, 10000); // exactly 2 seconds before redirecting back
+      });
+    </script>
+  </head>
+  <body>
+    <div class="fullscreen-bg">
+      <!-- Loading spinner or text here -->
+    </div>
+  </body>
 </html>
